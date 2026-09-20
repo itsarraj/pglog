@@ -1,0 +1,24 @@
+[package]
+name = "pglog"
+version = "0.1.0"
+edition = "2021"
+description = "Parses a Postgres log with log_min_duration_statement enabled and reports the top slow queries by normalized fingerprint, no Perl required"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/pglog"
+readme = "README.md"
+keywords = ["postgres", "logs", "slow-query", "pgbadger", "performance"]
+categories = ["command-line-utilities", "database"]
+
+[lib]
+name = "pglog"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pglog"
+path = "src/main.rs"
+
+[dependencies]
+regex = "1"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
