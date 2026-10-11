@@ -6,6 +6,12 @@ Perl script. This does the one thing most people actually reach for it
 for: parse a log with `log_min_duration_statement` enabled and print the
 top slow queries by normalized shape, straight to the terminal.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
